@@ -13,6 +13,9 @@ Clientes a mayores se necesita conocer teléfono de contacto.
 Se necesita mostrar en la aplicación datos de empleados y clientes.
 
 
+![Alt text](Ejercicio%201.drawio.svg)
+
+
 Tarea 2. Biblioteca
 
 Una biblioteca tiene copias de libros.
@@ -23,6 +26,8 @@ Los lectores pueden tener un máximo de 3 libros en préstamo.
 Cada libro se presta un máximo de 30 días. Por cada día de retraso, se impone una "multa" de dos días sin posibilidad de coger un nuevo libro.
 Añadir los métodos necesarios para realizar el préstamo y devolución de libros.
 
+
+![Alt text](Ejercicio%202.drawio.svg)
 
 Tarea 3. Redes de Ordenadores
 
