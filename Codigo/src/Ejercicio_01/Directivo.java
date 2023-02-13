@@ -63,7 +63,8 @@ public class Directivo extends Empleado {
     private void rellenarSubordinados(Directivo[] rellenarSubordinados){
         for (int i = 0; i < rellenarSubordinados.length; i++) {
             for (int j = 0; j < rellenarSubordinados[i].numeroSubordinados; j++) {
-                rellenarSubordinados[i].nombresSubordinados[i]=Utilidades.plantillaNombres[Utilidades.numAleatorio(0,10)];
+                //TODO rellenar estos campos de nombres con nombres de empleados sin repetirlos.Pasar el vector de Empleados para poder sacar nombres de los Empleados que estén subordinados
+                rellenarSubordinados[i].nombresSubordinados[i]=;
             }
         }
     }
