@@ -57,6 +57,20 @@ public class Empleado {
         this.salarioBruto = salarioBruto;
     }
 
+    public static void mostrarEmpleados(Empleado[] mostrarEmpleados){
+        for (int i = 0; i < mostrarEmpleados.length-1; i++) {
+            System.out.println(mostrarEmpleados[i]);
+        }
+    }
+
+    public static void rellenarCampos(Empleado [] rellenarEmpleados){
+        for (int i = 0; i < rellenarEmpleados.length; i++) {
+            rellenarEmpleados[i].setNombre(Utilidades.plantillaNombres[Utilidades.numAleatorio(0,10)]);
+            rellenarEmpleados[i].setEdad(Utilidades.numAleatorio(18,65));
+            rellenarEmpleados[i].setSalarioBruto(Utilidades.numAleatorio((float) 10000.00,(float)35000.00));
+        }
+    }
+
     @Override
     public String toString() {
         return "Empleado{" +

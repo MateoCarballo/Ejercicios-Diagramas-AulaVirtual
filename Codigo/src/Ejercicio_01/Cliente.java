@@ -38,6 +38,20 @@ public class Cliente {
         this.tfnoContacto1 = tfnoContacto1;
     }
 
+    public static void mostrarClientes(Cliente[] mostrarClientes){
+        for (int i = 0; i < mostrarClientes.length-1 ; i++) {
+            System.out.println(mostrarClientes[i]);
+        }
+    }
+
+    public static void rellenarCampos(Cliente[] rellenarClientes){
+        for (int i = 0; i < rellenarClientes.length; i++) {
+            rellenarClientes[i].setNombre(Utilidades.plantillaNombres[Utilidades.numAleatorio(0,10)]);
+            rellenarClientes[i].setEdad(Utilidades.numAleatorio(16,60));
+            rellenarClientes[i].setTfnoContacto1(Utilidades.numAleatorio(986000000,986999999));
+        }
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
