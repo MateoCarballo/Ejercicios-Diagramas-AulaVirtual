@@ -11,8 +11,20 @@ public class Empleado {
 
     }
 
-    public static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
+    public Empleado(String nombre, int edad, float salarioBruto) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.salarioBruto = salarioBruto;
+    }
 
+    public static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
+/*
+        TODO falta meter las excepciones para evitar
+         crear el empleado si algun valor no es correcto
+         ahora mismo hace lo mismo que el constructor no evita
+         crear un empleado aunque no rellenemos los campos porque los valores
+         no están OK
+        */
 
         Empleado emp = new Empleado();
         if ((salarioBruto > 0) && (nombre.length() > 0) && (edad > 0)) {
@@ -20,10 +32,7 @@ public class Empleado {
             emp.setNombre(nombre);
             emp.setSalarioBruto(salarioBruto);
         }
-/*
-TODO falta meter las excepciones para evitar crear el empleado si algun valor no es correcto
- */
-        
+
         return emp;
     }
 
@@ -50,4 +59,7 @@ TODO falta meter las excepciones para evitar crear el empleado si algun valor no
     public void setSalarioBruto(float salarioBruto) {
         this.salarioBruto = salarioBruto;
     }
+
+
+
 }
