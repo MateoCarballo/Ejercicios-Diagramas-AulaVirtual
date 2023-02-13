@@ -8,15 +8,16 @@ public class Empleado {
     static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
         Empleado emp = null;
         if ((salarioBruto > 0) & (nombre.length() > 0) & (edad > 0)) {
-            emp = new Empleado(nombre, edad, salarioBruto);
+            emp = new Empleado();
+            emp.setEdad(edad);
+            emp.setNombre(nombre);
+            emp.setSalarioBruto(salarioBruto);
         }
         return emp;
     }
 
-    private Empleado(String nombre, int edad, float salarioBruto) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.salarioBruto = salarioBruto;
+    private Empleado() {
+
     }
 
     public String getNombre() {
