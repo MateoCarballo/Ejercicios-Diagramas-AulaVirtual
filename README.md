@@ -13,7 +13,7 @@ Clientes a mayores se necesita conocer teléfono de contacto.
 Se necesita mostrar en la aplicación datos de empleados y clientes.
 
 
-![](Diagramas%20UML/Ejercicio%201.drawio.svg)
+![Alt text](Diagramas%20UML/Ejercicio%201.drawio.svg)
 
 
 Tarea 2. Biblioteca
