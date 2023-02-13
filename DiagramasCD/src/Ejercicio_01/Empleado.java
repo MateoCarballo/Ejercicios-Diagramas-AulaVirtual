@@ -5,19 +5,26 @@ public class Empleado {
     private int edad;
     private float salarioBruto;
     
-    static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
-        Empleado emp = null;
-        if ((salarioBruto > 0) & (nombre.length() > 0) & (edad > 0)) {
-            emp = new Empleado();
+
+
+    private Empleado() {
+
+    }
+
+    public static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
+
+
+        Empleado emp = new Empleado();
+        if ((salarioBruto > 0) && (nombre.length() > 0) && (edad > 0)) {
             emp.setEdad(edad);
             emp.setNombre(nombre);
             emp.setSalarioBruto(salarioBruto);
         }
+/*
+TODO falta meter las excepciones para evitar crear el empleado si algun valor no es correcto
+ */
+        
         return emp;
-    }
-
-    private Empleado() {
-
     }
 
     public String getNombre() {
