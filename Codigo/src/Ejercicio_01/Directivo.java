@@ -1,12 +1,16 @@
 package Ejercicio_01;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Directivo extends Empleado {
 
     private int categoria;
     private int numeroSubordinados;
-    private Empleado nombresSubordinados []=new Empleado [numeroSubordinados];
+
+    private ArrayList<Empleado> subordinados =new ArrayList();
+
+    //private Empleado nombresSubordinados []=new Empleado [numeroSubordinados];
 
     public Directivo(String nombre, int edad, float salarioBruto, int categoria) {
         super(nombre, edad, salarioBruto);
@@ -29,12 +33,14 @@ public class Directivo extends Empleado {
         this.numeroSubordinados = numeroSubordinados;
     }
 
-    public void addsubordinado(Empleado[] miEmpleado){
-        for (int i = 0; i < miEmpleado.length ; i++) {
-            if(miEmpleado[i]==null){
+    public void addSubordinate(Empleado miEmpleado){
+        this.subordinados.add(miEmpleado);
+    }
 
-            }
-        }
+    public void removeSubordinate(String miNombre){
+        // pasar valor caracteristico para saber que elimino al que quiero y no a otro un ID por ejemplo
+
+        this.subordinados.removeIf(Empleado->Empleado.getNombre().equalsIgnoreCase(miNombre));
     }
 
     public static void mostrarSubordinados(){
@@ -46,7 +52,7 @@ public class Directivo extends Empleado {
         return "Directivo{" +
                 "categoria=" + categoria +
                 ", numeroSubordinados=" + numeroSubordinados +
-                ", nombresSubordinados=" + Arrays.toString(nombresSubordinados) +
+                ", nombresSubordinados=" + Arrays.toString(subordinados) +
                 '}';
     }
 }
