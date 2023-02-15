@@ -3,7 +3,7 @@ package Ejercicio_01;
 public class Empresa {
     public static void main(String[] args) {
 
-        int entrada=3;
+        int entrada=2;
 
         Cliente[] misClientes =new Cliente[10];
         Empleado[] misEmpleados=new Empleado[10];
@@ -20,7 +20,7 @@ public class Empresa {
         }
 
         Empleado.rellenarCampos(misEmpleados);
-        misDirectivos[0].rellenarCampos(misDirectivos);
+        rellenarCampos(misDirectivos);
         rellenarCampos(misClientes);
 
         System.out.println("""
@@ -70,7 +70,7 @@ public class Empresa {
             rellenarClientes[i].setTfnoContacto1(Utilidades.numAleatorio(986000000,986999999));
         }
     }
-    public void rellenarCampos(Directivo [] rellenarDirectivos){
+    public static void rellenarCampos(Directivo [] rellenarDirectivos){
         for (int i = 0; i < rellenarDirectivos.length; i++) {
             rellenarDirectivos[i].setNombre(Utilidades.plantillaNombres[Utilidades.numAleatorio(0,10)]);
             rellenarDirectivos[i].setEdad(Utilidades.numAleatorio(18,65));
@@ -80,12 +80,15 @@ public class Empresa {
         }
         rellenarSubordinados(rellenarDirectivos);
     }
-    private void rellenarSubordinados(Directivo[] rellenarSubordinados){
-        for (int i = 0; i < rellenarSubordinados.length; i++) {
-            for (int j = 0; j < rellenarSubordinados[i].getNumeroSubordinados(); j++) {
+    public static void rellenarSubordinados(Directivo[] directivoss){
+        String[] auxiliar= new String []
+        for (int i = 0; i < directivoss.length; i++) {
+            for (int j = 0; j < directivoss[i].getNumeroSubordinados(); j++) {
+                
                 //TODO rellenar estos campos de nombres con nombres de empleados sin repetirlos.
                 // Pasar el vector de Empleados para poder sacar nombres de los Empleados que estén subordinados
-                rellenarSubordinados[i].getNombresSubordinados();
+
+                directivoss[i].nombresSubordinados[i];
             }
         }
     }

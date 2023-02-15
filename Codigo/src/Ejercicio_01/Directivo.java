@@ -43,6 +43,10 @@ public class Directivo extends Empleado {
         this.nombresSubordinados = nombresSubordinados;
     }
 
+    public static void mostrarSubordinados(){
+
+    }
+
     @Override
     public String toString() {
         return "Directivo{" +
