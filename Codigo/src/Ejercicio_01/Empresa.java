@@ -7,16 +7,13 @@ public class Empresa {
 
         Cliente[] misClientes =new Cliente[10];
         Empleado[] misEmpleados=new Empleado[10];
-        Directivo[] misDirectivos =new Directivo[5];
+
 
         for (int i = 0; i < misClientes.length; i++) {
             misClientes[i]= new Cliente();
         }
         for (int i = 0; i < misEmpleados.length; i++) {
             misEmpleados[i]=new Empleado();
-        }
-        for (int i = 0; i < misDirectivos.length; i++) {
-            misDirectivos[i] = new Directivo();
         }
 
         Empleado.rellenarCampos(misEmpleados);

@@ -11,7 +11,6 @@ public class Directivo extends Empleado {
     public Directivo(String nombre, int edad, float salarioBruto, int categoria) {
         super(nombre, edad, salarioBruto);
         this.categoria = categoria;
-
     }
 
     public int getCategoria() {

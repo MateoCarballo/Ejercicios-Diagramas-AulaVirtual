@@ -18,9 +18,9 @@ package Ejercicio_01;
  */
 
 public class Empleado {
-    private String nombre;
-    private int edad;
-    private float salarioBruto;
+    protected String nombre;
+    protected int edad;
+    protected float salarioBruto;
 
     public Empleado(){
 
