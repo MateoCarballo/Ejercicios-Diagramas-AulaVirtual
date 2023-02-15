@@ -6,17 +6,12 @@ public class Directivo extends Empleado {
 
     private int categoria;
     private int numeroSubordinados;
-    private String nombresSubordinados []=new String [numeroSubordinados];
+    private Empleado nombresSubordinados []=new Empleado [numeroSubordinados];
 
-    public Directivo(){
-
-    }
-
-    public Directivo(String nombre, int edad, float salarioBruto, int categoria, int subordinados, String[] nombresSubordinados) {
+    public Directivo(String nombre, int edad, float salarioBruto, int categoria) {
         super(nombre, edad, salarioBruto);
         this.categoria = categoria;
-        this.numeroSubordinados = subordinados;
-        this.nombresSubordinados = nombresSubordinados;
+
     }
 
     public int getCategoria() {
@@ -35,12 +30,12 @@ public class Directivo extends Empleado {
         this.numeroSubordinados = numeroSubordinados;
     }
 
-    public String[] getNombresSubordinados() {
-        return nombresSubordinados;
-    }
+    public void addsubordinado(Empleado[] miEmpleado){
+        for (int i = 0; i < miEmpleado.length ; i++) {
+            if(miEmpleado[i]==null){
 
-    public void setNombresSubordinados(String[] nombresSubordinados) {
-        this.nombresSubordinados = nombresSubordinados;
+            }
+        }
     }
 
     public static void mostrarSubordinados(){
