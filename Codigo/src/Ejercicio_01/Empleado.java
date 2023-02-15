@@ -57,11 +57,7 @@ public class Empleado {
         this.salarioBruto = salarioBruto;
     }
 
-    public static void mostrarEmpleados(Empleado[] mostrarEmpleados){
-        for (int i = 0; i < mostrarEmpleados.length-1; i++) {
-            System.out.println(mostrarEmpleados[i]);
-        }
-    }
+
 
     public static void rellenarCampos(Empleado [] rellenarEmpleados){
         for (int i = 0; i < rellenarEmpleados.length; i++) {
