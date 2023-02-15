@@ -84,7 +84,7 @@ public class Empresa {
         String[] auxiliar= new String []
         for (int i = 0; i < directivoss.length; i++) {
             for (int j = 0; j < directivoss[i].getNumeroSubordinados(); j++) {
-                
+
                 //TODO rellenar estos campos de nombres con nombres de empleados sin repetirlos.
                 // Pasar el vector de Empleados para poder sacar nombres de los Empleados que estén subordinados
 
