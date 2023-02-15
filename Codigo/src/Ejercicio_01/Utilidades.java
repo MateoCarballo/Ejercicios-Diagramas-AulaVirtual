@@ -16,4 +16,5 @@ public class Utilidades {
         long aleatorio = (long)(Math.random()*(limSuperior-limInferior+1)+limInferior);
         return aleatorio;
     }
+	//TODO cambiar String por datos de tipo empleado. mas metodo add subordinate
 }
