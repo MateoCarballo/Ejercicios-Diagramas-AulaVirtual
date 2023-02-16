@@ -5,18 +5,21 @@ Representa mediante Diagrama de Clases (con nombres de relaciones y roles), las 
 
 
 
-Tarea 1. Empleados de Empresa
+## Tarea 1. Empleados de Empresa
 
 Una aplicación guardará información sobre empresa, empleados y clientes. Estos dos últimos se caracterizan por nombre y edad.
 Empleados tienen sueldo bruto, los empleados directivos tienen una categoría, así como un conjunto de empleados subordinados.
 Clientes a mayores se necesita conocer teléfono de contacto.
 Se necesita mostrar en la aplicación datos de empleados y clientes.
 
+### Solución:
+    Tenemos una clase empresa que es la que ejecuta la main y nos enseña un menu para elegir que queremos hacer
+    
 
 ![Alt text](Diagramas%20UML/Ejercicio%201.drawio.svg)
 
 
-Tarea 2. Biblioteca
+## Tarea 2. Biblioteca
 
 Una biblioteca tiene copias de libros.
 Los libros se caracterizan por su nombre, tipo (novela, teatro, poesía, ensayo), editorial, año y autor.
@@ -28,7 +31,7 @@ Añadir los métodos necesarios para realizar el préstamo y devolución de libr
 
 ![](Diagramas%20UML/Ejercicio%202.drawio.svg)
 
-Tarea 3. Redes de Ordenadores
+## Tarea 3. Redes de Ordenadores
 
 
 Los elementos que se pueden incluir en la red son: Servidor, PC, Impresora, Hub, Cable de Red
@@ -39,7 +42,7 @@ Tienen cierta probabilidad de "perder" mensajes.
 Las impresoras pueden averiarse, con cierta probabilidad, durante cierto tiempo.
 
 
-Tarea 4.  Robot Modular
+## Tarea 4.  Robot Modular
 
 Se quiere hacer el diseño de un robot modular. El robot estará compuesto por varios módulos entre los que se encuentran: rotación, extensión, helicoidal, cámara. Los módulos podrán ser:
 
@@ -60,7 +63,7 @@ Se pide que utilizando herencia siempre que se pueda, se realice un diseño UML 
 
 
 
-Tarea 5. Sistema de Gestión Bibliográfica
+## Tarea 5. Sistema de Gestión Bibliográfica
 
 Se desea realizar el modelo de un sistema de gestión bibliográfica. Para ello se consideran los siguientes conceptos:
 
@@ -77,7 +80,7 @@ Las clases que se consideren necesarias con sus atributos y métodos. El tipo de
 
 
 
-Tarea 6: Gestión de pedidos.
+## Tarea 6: Gestión de pedidos.
 
 • Una aplicación de gestión de pedidos desea guardar información de los pedidos que realizan sus clientes y la fecha en que se formalizan.
 
@@ -99,7 +102,7 @@ Tarea 6: Gestión de pedidos.
 
 
 
-Tarea 7: Hospital.
+## Tarea 7: Hospital.
 
 • Un hospital trabaja con un conjunto de pacientes, médicos y enfermeros.
 

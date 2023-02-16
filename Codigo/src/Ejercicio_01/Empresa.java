@@ -22,7 +22,6 @@ public class Empresa {
 
         Empleado employee = new Empleado();
 
-
         ArrayList<Empleado> misEmpleados=new ArrayList();
         ArrayList<Cliente> misClientes=new ArrayList<>();
 
