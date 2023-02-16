@@ -1,51 +1,116 @@
 package Ejercicio_01;
 
-public class Empresa {
-    public static void main(String[] args) {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
+public class Empresa {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int entrada=2;
 
-        Cliente[] misClientes =new Cliente[10];
-        Empleado[] misEmpleados=new Empleado[10];
+        int contadorId00=0;
+        int contadorId01=0;
+
+        int id=0;
+        String nombre;
+        int edad;
+        long tfnoContacto;
+        float salarioBruto;
+        int categoria;
+
+        Empleado employee = new Empleado();
 
 
-        for (int i = 0; i < misClientes.length; i++) {
-            misClientes[i]= new Cliente();
-        }
-        for (int i = 0; i < misEmpleados.length; i++) {
-            misEmpleados[i]=new Empleado();
-        }
-
-        Empleado.rellenarCampos(misEmpleados);
-        rellenarCampos(misDirectivos);
-        rellenarCampos(misClientes);
+        ArrayList<Empleado> misEmpleados=new ArrayList();
+        ArrayList<Cliente> misClientes=new ArrayList<>();
 
         System.out.println("""
                 Ejercicio 01 Contornos:
             
                 Opciones:
-                1.Mostrar Clientes.
-                2.Mostrar Empleados.
-                3.Mostrar Directivos """);
+                11.Añadir Empleado
+                12.Mostrar Empleados
+                13.Eliminar Empleado
+                
+                21.Añadir Cliente
+                22.Mostrar Cliente
+                23.Eliminar Cliente
+                
+                31.Añadir Directivo
+                32.Mostrar Directivo
+                33.Mostrar Subordinados
+                34.Eliminar Directivo""");
 
         switch (entrada){
-            case 1 -> {
-                mostrarClientes(misClientes);
+            case 11 -> {
+                contadorId00++;
+                System.out.println("Nombre?");
+                nombre= br.readLine();
+                System.out.println("Edad?");
+                edad= Integer.parseInt(br.readLine());
+                System.out.println("SalarioBruto?");
+                salarioBruto=Float.parseFloat(br.readLine());
+
+                Empleado.addEmployee(misEmpleados,contadorId00,nombre,edad,salarioBruto);
+
             }
-            case 2->{
-                /**
-                 * TODO como puedo hacer para asegurarme de no llamar a mostrar o rellenar sin haber instanciado ya
-                 * los objetos de cada una de las clases. Servirá con usar cualquiera de ellos ¿? Entiendo que no
+
+            case 13->{
+                System.out.println("ID del empleado a eliminar?");
+                id=Integer.parseInt(br.readLine());
+                /*
+                Buscamos entre los elementos de la Arraylist el elemento que contenga un id como el que recogemos
+                por teclado. Si es así podremos llamar al metodo que elimina el índice que le pasamos como parametro
                  */
-                mostrarEmpleados(misEmpleados);
+
+                for (int i = 0; i < misEmpleados.size(); i++) {
+                    employee=misEmpleados.get(i);
+                    if(employee.getIdEmpleado()==id){
+                        employee.deleteEmployee(misEmpleados,i);
+                    }
+
+                }
+                employee.deleteEmployee(misEmpleados,id);
             }
-            case 3->{
-                mostrarDirectivos(misDirectivos);
+            case 21->{
+                contadorId00++;
+                System.out.println("Nombre?");
+                nombre= br.readLine();
+                System.out.println("Edad?");
+                edad= Integer.parseInt(br.readLine());
+                System.out.println("Telefono de contacto?");
+                tfnoContacto=Long.parseLong(br.readLine());
+                Cliente.addCustomer(misClientes,contadorId00,nombre,edad,tfnoContacto);
+
+            }
+            case 31->{
+                contadorId00++;
+                System.out.println("Nombre?");
+                nombre= br.readLine();
+                System.out.println("Edad?");
+                edad= Integer.parseInt(br.readLine());
+                System.out.println("SalarioBruto?");
+                salarioBruto=Float.parseFloat(br.readLine());
+                System.out.println("Categoría?");
+                categoria=Integer.parseInt(br.readLine());
+                Directivo.addManagerial(misEmpleados,contadorId00,nombre,edad,salarioBruto,categoria);
+            }
+            case 34->{
+                System.out.println("ID del directivo a eliminar?");
+                id=Integer.parseInt(br.readLine());
+                employee.deleteEmployee(misEmpleados,id);
+
+
             }
         }
     }
 
-    public static void mostrarClientes(Cliente[] mostrarClientes){
+/*
+//TODO Generalizar los metodos e incorporarlos a la clase correspondiente. Encapsular el código.
+
+ public static void mostrarClientes(Cliente[] mostrarClientes){
         for (int i = 0; i < mostrarClientes.length-1 ; i++) {
             System.out.println(mostrarClientes[i]);
         }
@@ -82,11 +147,14 @@ public class Empresa {
         for (int i = 0; i < directivoss.length; i++) {
             for (int j = 0; j < directivoss[i].getNumeroSubordinados(); j++) {
 
-                //TODO rellenar estos campos de nombres con nombres de empleados sin repetirlos.
+
                 // Pasar el vector de Empleados para poder sacar nombres de los Empleados que estén subordinados
 
                 directivoss[i].nombresSubordinados[i];
             }
         }
     }
+ */
+
+
 }

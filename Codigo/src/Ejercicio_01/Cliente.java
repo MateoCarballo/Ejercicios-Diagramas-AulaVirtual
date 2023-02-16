@@ -1,6 +1,9 @@
 package Ejercicio_01;
 
+import java.util.ArrayList;
+
 public class Cliente {
+    private int idCliente;
     private String nombre;
     private int edad;
     private long tfnoContacto1;
@@ -8,7 +11,8 @@ public class Cliente {
 
     }
 
-    public Cliente(String nombre, int edad, long tfnoContacto1) {
+    public Cliente(int idCliente,String nombre, int edad, long tfnoContacto1) {
+        this.idCliente=idCliente;
         this.nombre = nombre;
         this.edad = edad;
         this.tfnoContacto1 = tfnoContacto1;
@@ -38,9 +42,9 @@ public class Cliente {
         this.tfnoContacto1 = tfnoContacto1;
     }
 
-
-
-
+    public static void addCustomer(ArrayList<Cliente> miCustomer,int idCliente,String nombre, int edad, long tfnoContacto1){
+        miCustomer.add(new Cliente(idCliente,nombre,edad,tfnoContacto1));
+    }
 
     @Override
     public String toString() {

@@ -1,5 +1,7 @@
 package Ejercicio_01;
 
+import java.util.ArrayList;
+
 /**TODO public static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
  falta meter las excepciones para evitar
  crear el empleado si algún valor no es correcto
@@ -18,6 +20,7 @@ package Ejercicio_01;
  */
 
 public class Empleado {
+    protected int idEmpleado;
     protected String nombre;
     protected int edad;
     protected float salarioBruto;
@@ -26,39 +29,41 @@ public class Empleado {
 
     }
 
+    public Empleado(String nombre, int edad, float salarioBruto, int idEmpleado){
 
-    public Empleado(String nombre, int edad, float salarioBruto) {
+    }
+
+
+    public Empleado(int idEmpleado, String nombre, int edad, float salarioBruto) {
         this.nombre = nombre;
         this.edad = edad;
         this.salarioBruto = salarioBruto;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getIdEmpleado() {
+        return idEmpleado;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
     public void setEdad(int edad) {
         this.edad = edad;
-    }
-
-    public float getSalarioBruto() {
-        return salarioBruto;
     }
 
     public void setSalarioBruto(float salarioBruto) {
         this.salarioBruto = salarioBruto;
     }
 
+    public static void addEmployee(ArrayList<Empleado> employes,int idEmpleado,String nombre, int edad,float salarioBruto){
+        employes.add(new Empleado( idEmpleado,nombre, edad, salarioBruto));
+    }
 
-
+    public void deleteEmployee(ArrayList<Empleado> employes,int indice){
+        //elimina de la 'ArrayList' de empleados el índice que pasamos como parametro
+        employes.remove(indice);
+    }
     public static void rellenarCampos(Empleado [] rellenarEmpleados){
         for (int i = 0; i < rellenarEmpleados.length; i++) {
             rellenarEmpleados[i].setNombre(Utilidades.plantillaNombres[Utilidades.numAleatorio(0,10)]);
