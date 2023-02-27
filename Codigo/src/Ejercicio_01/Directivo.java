@@ -2,19 +2,20 @@ package Ejercicio_01;
 
 import java.util.ArrayList;
 
-public class Directivo<misEmpleados> extends Empleado {
+public class Directivo extends Empleado {
 
     private int categoria;
 
     private ArrayList<Empleado> subordinados =new ArrayList();
 
     public Directivo(int idEmpleado, String nombre, int edad, float salarioBruto, int categoria) {
-        super(nombre, edad, salarioBruto,idEmpleado);
+        super(idEmpleado,nombre, edad, salarioBruto);
         this.categoria = categoria;
     }
     public static void addManagerial(ArrayList<Empleado> employes, int id,String nombre,int edad, float salarioBruto,int categoria){
         employes.add(new Directivo(id,nombre,edad, salarioBruto,categoria));
     }
+
     public void deleteManagerial(ArrayList<Empleado> employes, int id){
         /*
         Pido el ID a la superclase de esta y si elimino la posicion

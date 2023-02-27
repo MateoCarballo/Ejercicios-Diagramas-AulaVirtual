@@ -29,6 +29,9 @@ Los lectores pueden tener un máximo de 3 libros en préstamo.
 Cada libro se presta un máximo de 30 días. Por cada día de retraso, se impone una "multa" de dos días sin posibilidad de coger un nuevo libro.
 Añadir los métodos necesarios para realizar el préstamo y devolución de libros.
 
+
+#### SOLUCION:
+
 ![](Diagramas%20UML/Ejercicio%202.drawio.svg)
 
 ## Tarea 3. Redes de Ordenadores
@@ -61,7 +64,8 @@ El sistema de control utiliza el sistema de mensajes para comunicarse. Los módu
 
 Se pide que utilizando herencia siempre que se pueda, se realice un diseño UML de las clases necesarias para representar todas las entidades del sistema, indicando atributos y métodos, así como las relaciones existentes entre las clases.
 
-
+#### Aclaraciones para mi solución del ejercicio:
+   
 
 ## Tarea 5. Sistema de Gestión Bibliográfica
 
