@@ -1,7 +1,6 @@
 package Ejercicio_01;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Directivo<misEmpleados> extends Empleado {
 
@@ -13,12 +12,9 @@ public class Directivo<misEmpleados> extends Empleado {
         super(nombre, edad, salarioBruto,idEmpleado);
         this.categoria = categoria;
     }
-
     public static void addManagerial(ArrayList<Empleado> employes, int id,String nombre,int edad, float salarioBruto,int categoria){
         employes.add(new Directivo(id,nombre,edad, salarioBruto,categoria));
     }
-
-
     public void deleteManagerial(ArrayList<Empleado> employes, int id){
         /*
         Pido el ID a la superclase de esta y si elimino la posicion
@@ -32,8 +28,11 @@ public class Directivo<misEmpleados> extends Empleado {
         }
     }
 
+
+
     @Override
     public String toString() {
+        super.toString();
         return "Directivo{" +
                 "categoria=" + categoria +
                 ", nombresSubordinados=" + subordinados +

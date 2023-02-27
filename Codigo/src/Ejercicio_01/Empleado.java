@@ -1,8 +1,8 @@
 package Ejercicio_01;
 
 import java.util.ArrayList;
-
-/**TODO public static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
+/**
+ TODO public static Empleado crearEmpleado(String nombre, int edad, float salarioBruto) {
  falta meter las excepciones para evitar
  crear el empleado si algún valor no es correcto
  ahora mismo hace lo mismo que el constructor no evita
@@ -14,7 +14,6 @@ import java.util.ArrayList;
  emp.setNombre(nombre);
  emp.setSalarioBruto(salarioBruto);
  }
-
  return emp;
  }
  */
@@ -28,11 +27,8 @@ public class Empleado {
     public Empleado(){
 
     }
-
     public Empleado(String nombre, int edad, float salarioBruto, int idEmpleado){
-
     }
-
 
     public Empleado(int idEmpleado, String nombre, int edad, float salarioBruto) {
         this.nombre = nombre;
@@ -61,7 +57,7 @@ public class Empleado {
     }
 
     public void deleteEmployee(ArrayList<Empleado> employes,int indice){
-        //elimina de la 'ArrayList' de empleados el índice que pasamos como parametro
+        //elimina de la 'ArrayList' de empleados el índice que pasamos como parámetro
         employes.remove(indice);
     }
     public static void rellenarCampos(Empleado [] rellenarEmpleados){
